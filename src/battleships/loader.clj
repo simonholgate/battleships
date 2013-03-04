@@ -1,13 +1,13 @@
 ;; The loader is what is used to compile the player. This makes use of Clojail to evaluate
 ;; the code in a way that will ensure no-one can blow up my computer!
 (ns battleships.loader
-  (:import [java.io PushbackReader]
-           [battleships.engine ShipPosition])
   (:require [clojure.java.io :as io]
             [battleships.game :as game]
             [battleships.engine :as engine]
             [clojail.core :as clojail]
-            [clojail.testers :as testers]))
+            [clojail.testers :as testers])
+  (:import [java.io PushbackReader]
+           [battleships.engine ShipPosition]))
 
 ;; Read the code in from the file, and use the reader to build up the Clojure data structure.
 (defn read-ns

@@ -10,7 +10,8 @@
             [compojure.route :as route]
             [compojure.handler :as handler]
             [ring.util.response :as resp]
-            [clojure.string :as string]))
+            [clojure.string :as string])
+  (:import [battleships.engine ShipPosition]))
 
 ;; constant
 ;; note this means each will play each other 500 times as player1, and 500 times as player2

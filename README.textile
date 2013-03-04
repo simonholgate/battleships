@@ -92,6 +92,7 @@ There is probably no point in updating a player, since none of the matches will 
 
 h2. License
 
-Copyright (C) 2011 Neill Alexander
+Copyright (C) 2011 Neill Alexander 
+Modified in 2013 by Simon Holgate to update to Leiningen 2, Clojure 1.4 and all recent dependencies.
 
 Distributed under the Eclipse Public License, the same as Clojure.
