@@ -1,0 +1,237 @@
+Simons-MacBook-Pro:battleships simonh$ lein repl
+nREPL server started on port 59157
+REPL-y 0.1.9
+Clojure 1.4.0
+    Exit: Control+D or (exit) or (quit)
+Commands: (user/help)
+    Docs: (doc function-name-here)
+          (find-doc "part-of-name-here")
+  Source: (source function-name-here)
+          (user/sourcery function-name-here)
+ Javadoc: (javadoc java-object-or-class-here)
+Examples from clojuredocs.org: [clojuredocs or cdoc]
+          (user/clojuredocs name-here)
+          (user/clojuredocs "ns-here" "name-here")
+battleships.core=> (-main)
+{:loser :player2, :winner :player1, :player1 {:context {:shots ["H5" "B4" "J5" "E9" "C3" "G7" "G2" "E5" "C5" "G8" "B7" "D2" "G5" "H6" "C1" "J10" "C2" "E3" "B9" "D7" "I8" "I9" "A6" "B10" "J8" "F5" "I4" "G10" "H4" "G6" "G1" "H9" "E8" "H2" "A9" "A5" "A4" "D5" "H3" "F4" "I1" "C7" "F6" "F2" "I6" "J1" "I7" "F10" "H7" "A2" "J2" "I3" "D3" "J7" "D9" "B6" "E6" "J4" "C9" "B3" "E7" "F3" "A10" "H8" "G4" "H10" "J6" "D4" "D1" "D6" "G3" "A7" "F1" "G9" "C8" "E4" "I10" "C10" "B1" "H1" "D8" "F8" "C6" "E1" "A1" "A3" "F9" "I2" "A8" "B8" "E10" "F7" "E2" "B5" "C4" "J3" "B2"], :last-result :submarine, :hits ["B4" "D2" "C1" "C2" "A6" "H4" "H2" "A9" "A5" "H3" "D1" "A7" "F1" "E1" "A8" "B5" "B2"], :ships-sunk [:destroyer :battleship :aircraft-carrier :patrol-boat :submarine]}, :name "cpu1", :board {:width 10, :height 10, :squares [1 1 1 5 5 5 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 8 8 9 1 0 1 1 2 1 1 1 1 1 1 1 1 1 3 1 0 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 33 17 17 17 0 1 1 1 1 1 33 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"G4" "F4" "E4"}, :coord "C4", :orientation :v}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"A4" "A5" "A6" "A7"}, :coord "A4", :orientation :h}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"C9"}, :coord "C7", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"H6" "H7" "H8"}, :coord "H6", :orientation :h}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"I5" "H5"}, :coord "H5", :orientation :v}}}, :player2 {:context {:shots ["B5" "A6" "F6" "J10" "H3" "I1" "I6" "F7" "H6" "E10" "E2" "E3" "B4" "E7" "A5" "D7" "I10" "J9" "A2" "C1" "C5" "A1" "G6" "I3" "G5" "A8" "I2" "D9" "I8" "D3" "A4" "E9" "G2" "A9" "F4" "H4" "J4" "B8" "J1" "A7" "G3" "B3" "G9" "J6" "G10" "A3" "J5" "B1" "B6" "B10" "H7" "A10" "B2" "C2" "E1" "C3" "F3" "H8" "D5" "F1" "G4" "D10" "G8" "I7" "J7" "F5" "H1" "H5" "E4" "F9" "J2" "D2" "D8" "I5" "F10" "B7" "J3" "E5" "F2" "B9" "G7" "F8" "E8" "I9" "G1" "C9" "C6" "C10" "D6" "J8" "H10" "H2" "I4"], :last-result :miss, :hits ["A6" "H6" "A5" "A4" "F4" "A7" "H7" "H8" "G4" "H5" "E4" "I5" "C9"], :ships-sunk [:battleship :submarine :patrol-boat]}, :name "cpu2", :board {:width 10, :height 10, :squares [1 1 1 1 3 3 3 3 3 1 1 17 1 33 33 1 1 1 1 1 5 17 1 1 1 1 1 1 1 1 5 17 1 1 1 1 1 1 1 0 5 1 1 1 1 1 1 1 1 1 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 9 9 9 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"A5" "A6" "A7" "A8" "A9"}, :coord "A5", :orientation :h}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"F1" "E1" "D1" "C1"}, :coord "C1", :orientation :v}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"H2" "H3" "H4"}, :coord "H2", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"D2" "C2" "B2"}, :coord "B2", :orientation :v}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"B4" "B5"}, :coord "B4", :orientation :h}}}}
+
+battleships.core=> (def player1 (make-random-cpu-player "player1"))
+#'battleships.core/player1
+battleships.core=> (def player2 (make-random-cpu-player "player2"))
+#'battleships.core/player2
+battleships.core=> (test-player player1)
+{:loser :player2, :winner :player1, :player1 {:context {:shots ["I9" "H8" "H3" "I10" "J6" "D6" "I2" "C2" "E8" "E4" "F3" "J8" "C5" "A2" "F9" "A3" "B2" "I8" "D1" "B6" "H7" "J10" "G8" "D8" "F6" "A6" "J9" "E2" "F4" "G3" "I3" "H10" "B10" "C4" "G7" "H4" "G5" "D2" "J1" "C8" "F8" "A7" "G9" "E7" "I6" "A8" "E9" "E10" "C9" "A1" "C3" "G10" "C6" "F1" "C1" "H5" "E1" "H6" "H1" "G1" "A9" "F5" "I7" "J4" "G4" "B3" "D5" "A4" "B5" "J5" "D9" "C10" "F2" "I5" "A10" "B4" "D10" "H2" "F7" "E3" "H9" "B1" "I1" "F10" "D4" "D7" "G2" "I4" "J2" "B9" "G6" "B8" "J7" "D3"], :last-result :battleship, :hits ["D6" "I2" "H7" "H10" "E10" "G10" "H5" "H6" "H1" "G1" "D5" "D10" "H2" "F10" "D4" "J2" "D3"], :ships-sunk [:submarine :patrol-boat :aircraft-carrier :destroyer :battleship]}, :name "player1", :board {:width 10, :height 10, :squares [1 9 9 9 1 33 33 1 1 1 1 1 1 1 1 1 1 1 1 1 5 5 5 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 16 1 1 1 0 1 3 1 0 1 17 1 1 1 1 1 3 1 1 1 17 1 1 1 1 1 3 1 1 1 1 1 0 1 0 1 3 1 1 1 1 1 1 1 1 1 3 1 1 1 0 1 1 1 1 1 0 1 1 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"I7" "H7" "G7" "F7" "E7"}, :coord "E7", :orientation :v}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"C1" "C2" "C3" "C4"}, :coord "C1", :orientation :h}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"A2" "A3" "A4"}, :coord "A2", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"G1" "F1"}, :coord "E1", :orientation :v}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"A6" "A7"}, :coord "A6", :orientation :h}}}, :player2 {:context {:shots ["D1" "F7" "C9" "J8" "E6" "I3" "F4" "B8" "B5" "H10" "C8" "A8" "G5" "F10" "G7" "E8" "A3" "B4" "G6" "D2" "I5" "J5" "D5" "E4" "B6" "C5" "G9" "B10" "H6" "J10" "I10" "A2" "G8" "E2" "J6" "C2" "A10" "G3" "C10" "B3" "F5" "G4" "F9" "D6" "I7" "A7" "C1" "D8" "F2" "I1" "G1" "H4" "I2" "J9" "B1" "A4" "F6" "E10" "D9" "C6" "D4" "I6" "A6" "F1" "A5" "H7" "B2" "G10" "J2" "F8" "G2" "B9" "H9" "J3" "B7" "E3" "D7" "H1" "F3" "H2" "A9" "I8" "J4" "E7" "A1" "I4" "D3" "C7" "C3" "C4" "H8" "D10" "I9"], :last-result :miss, :hits ["F7" "G7" "A3" "A2" "C2" "I7" "A7" "C1" "G1" "A4" "A6" "F1" "H7" "E7" "C3" "C4"], :ships-sunk [:destroyer :patrol-boat :aircraft-carrier :battleship]}, :name "cpu", :board {:width 10, :height 10, :squares [1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 5 5 5 5 1 1 1 3 1 1 1 1 0 0 1 1 1 3 1 1 1 1 1 1 1 1 1 3 33 1 1 1 1 1 1 1 1 3 33 9 1 1 17 17 17 1 1 3 1 9 1 1 1 1 1 1 1 1 1 9 0 1 1 1 1 1 1 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"D10" "E10" "F10" "G10" "H10"}, :coord "D10", :orientation :v}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"D3" "D4" "D5" "D6"}, :coord "D3", :orientation :h}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"J2" "I2" "H2"}, :coord "H2", :orientation :v}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"H5" "H6" "H7"}, :coord "H5", :orientation :h}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"H1" "G1"}, :coord "G1", :orientation :v}}}}
+
+
+battleships.core=> (require '(battleships [client :as c]))
+nil
+
+battleships.core=> (c/submit-player "src/battleships/demo.clj" 
+              #_=> "My Player" 
+              #_=> "http://localhost:3000")
+Submitting to http://localhost:3000/create
+{:trace-redirects ["http://localhost:3000/create"], :request-time 3869, :status 200, :headers {"date" "Mon, 04 Mar 2013 16:49:43 GMT", "content-type" "text/html;charset=UTF-8", "connection" "close", "server" "Jetty(7.6.1.v20120215)"}, :body "player2862"} 
+
+battleships.core=> (battleships.demo/place-ship :submarine)
+{:square "A8", :orientation :v} 
+
+battleships.core=> (battleships.demo/place-ship :destroyer)
+{:square "C3", :orientation :v}
+
+battleships.core=> (engine/play player1 player2)
+{:loser :player1, :winner :player2, :player1 {:context {:shots ["J4" "F10" "B1" "B7" "I10" "H2" "J8" "F1" "B4" "F7" "H6" "G7" "E7" "J9" "H5" "B6" "H7" "C2" "F6" "E5" "D10" "G4" "I8" "G3" "F5" "C6" "J2" "A5" "B5" "C9" "D7" "A9" "D3" "E10" "E6" "F3" "B10" "C3" "A4" "D9" "E4" "H8" "C8" "J7" "I1" "H10" "D2" "A6" "G6" "G10" "J10" "I9" "I4" "G8" "F9" "F8" "C7" "H4" "E9" "G2" "D6" "I7" "H9" "G1" "B9" "C5" "A3" "E2" "H3" "E8" "E1" "C10" "F4" "J5" "C4" "H1" "J3" "E3" "A8" "B2" "I3" "D8" "G9" "I5" "J1" "A1" "B8"], :last-result :miss, :hits ["B4" "B6" "C2" "I8" "A5" "B5" "C3" "E4" "A6" "I9" "I7" "C4" "B2"], :ships-sunk [:submarine]}, :name "player1", :board {:width 10, :height 10, :squares [1 1 1 9 9 9 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 3 1 1 0 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 3 1 1 1 5 5 5 5 33 1 3 1 17 17 17 1 0 0 33 1 3 0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"G3" "F3" "E3" "D3" "C3"}, :coord "C3", :orientation :v}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"E10" "E7" "E8" "E9"}, :coord "E7", :orientation :h}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"A4" "A5" "A6"}, :coord "A4", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"F5" "F6" "F7"}, :coord "F5", :orientation :h}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"G1" "F1"}, :coord "F1", :orientation :v}}}, :player2 {:context {:shots ["G1" "C4" "E2" "D2" "E9" "E1" "E3" "B9" "E4" "A2" "B5" "A1" "I9" "F5" "J10" "H6" "A9" "A7" "F6" "C8" "H9" "A4" "C3" "G3" "I2" "I8" "E6" "B7" "A8" "J1" "E5" "B10" "B8" "F7" "I3" "D10" "I6" "J3" "F8" "I4" "F2" "B6" "I7" "A6" "H7" "A10" "G8" "J8" "D4" "E10" "B2" "D1" "E8" "C7" "H8" "J2" "D9" "D7" "D3" "D6" "C10" "D8" "C9" "J5" "C2" "J9" "A3" "H5" "G7" "H2" "B3" "G2" "C1" "C5" "D5" "J4" "F3" "A5" "G6" "I5" "J6" "I10" "F4" "G5" "H3" "H4" "F1" "I1" "G10" "E7"], :last-result :battleship, :hits ["G1" "E9" "E3" "F5" "F6" "A4" "C3" "G3" "F7" "A6" "E10" "E8" "D3" "F3" "A5" "F1" "E7"], :ships-sunk [:submarine :aircraft-carrier :destroyer :patrol-boat :battleship]}, :name "player2", :board {:width 10, :height 10, :squares [1 0 1 1 9 9 8 1 1 0 1 3 2 3 3 3 1 1 1 1 4 5 5 5 1 1 1 1 1 1 0 1 1 32 0 1 1 1 1 1 1 1 1 33 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 17 17 17 1 1 1 1 1 1 0 1 1 1 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"B2" "B4" "B5" "B6"}, :coord "B2", :orientation :h}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"C2" "C3" "C4"}, :coord "C1", :orientation :h}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"A5" "A6"}, :coord "A5", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"I7" "I8" "I9"}, :coord "I7", :orientation :h}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"E4"}, :coord "D4", :orientation :v}}}}
+battleships.core=> (c/test-player "src/battleships/demo.clj") 
+{:loser :player2, :winner :player1, :player1 {:context {:shots ["J5" "H7" "C4" "I2" "G8" "A2" "H6" "G7" "E5" "E6" "C5" "F6" "D7" "J3" "B8" "D8" "B6" "I10" "B10" "C9" "H10" "D6" "B3" "G9" "A5" "G10" "J9" "C7" "D10" "C1" "G6" "D2" "D4" "J1" "I6" "E3" "J6" "I1" "I5" "F1" "E2" "H8" "F2" "I8" "D3" "E9" "B5" "D5" "G5" "B1" "A3" "C3" "C8" "E4" "A7" "H1" "G3" "F9" "A9" "C10" "F3" "H5" "G4" "F5" "C6" "B4" "G1" "A4" "E7" "J8" "I4" "C2" "D1" "J10" "B9" "E8" "I9" "A6" "H9" "E1" "G2" "F4" "B2" "F10" "F7" "D9" "B7" "I7" "F8" "I3" "A10" "H3" "J4" "J2" "J7"], :last-result :aircraft-carrier, :hits ["G7" "C9" "J9" "G6" "J6" "F2" "E9" "G5" "C8" "F9" "C10" "F3" "F5" "J8" "J10" "F4" "J7"], :ships-sunk [:destroyer :patrol-boat :submarine :battleship :aircraft-carrier]}, :name "Test Player", :board {:width 10, :height 10, :squares [1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 33 33 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 9 9 9 1 1 1 1 1 5 1 1 1 1 17 1 1 1 1 5 1 1 1 1 17 0 1 1 1 4 1 1 1 1 17 1 1 1 0 5 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 3 3 3 3 3 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"J5" "J6" "J7" "J8" "J9"}, :coord "J5", :orientation :h}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"H9" "F9" "E9"}, :coord "E9", :orientation :v}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"E1" "E2" "E3"}, :coord "E1", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"H4" "G4" "F4"}, :coord "F4", :orientation :v}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"C4" "C5"}, :coord "C4", :orientation :h}}}, :player2 {:context {:shots ["C3" "C10" "F5" "B2" "J6" "I2" "G1" "D10" "E4" "D7" "I10" "H3" "F4" "D4" "D9" "C1" "B10" "D2" "D8" "I5" "A5" "C7" "G4" "E5" "J3" "A7" "E1" "H10" "E2" "C2" "I7" "B4" "F1" "D1" "D5" "E10" "F9" "I9" "G2" "H2" "H6" "B7" "G3" "A4" "J9" "H1" "B6" "J4" "A6" "J2" "A3" "E7" "J5" "J7" "E9" "I4" "C9" "J10" "F6" "E3" "C6" "J1" "B1" "H9" "B8" "C5" "A2" "C8" "G10" "D3" "I3" "E8" "J8" "F7" "I1" "B5" "G7" "C4" "F3" "A1" "B9" "G6" "H7" "I8" "F2" "G8" "H4" "F10" "H5" "F8" "E6" "A8" "A10" "B3"], :last-result :miss, :hits ["J6" "F4" "G4" "E1" "E2" "F9" "J9" "J5" "J7" "E9" "E3" "H9" "C5" "J8" "C4" "H4"], :ships-sunk [:destroyer :aircraft-carrier :patrol-boat :submarine]}, :name "cpu", :board {:width 10, :height 10, :squares [0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 17 17 17 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 33 0 1 5 5 5 5 1 1 1 33 1 1 1 1 1 9 9 9 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 3 3 3]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"J10" "J6" "J7" "J8" "J9"}, :coord "J6", :orientation :h}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"F2" "F3" "F4" "F5"}, :coord "F2", :orientation :h}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"G5" "G6" "G7"}, :coord "G5", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"C10" "C8" "C9"}, :coord "C8", :orientation :h}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"F9" "E9"}, :coord "E9", :orientation :v}}}}
+
+battleships.core=> (engine/get-name player1)
+"player1"
+battleships.core=> (engine/bot? player1)
+true
+battleships.core=> (engine/ship-position player1 :submarine)
+#battleships.engine.ShipPosition{:coord "I9", :orientation :h}
+
+battleships.core=> board/ship-keys
+[:aircraft-carrier :battleship :destroyer :submarine :patrol-boat]
+
+battleships.core=> (require '(battleships [simons_demo :as s]))
+nil
+
+battleships.core=> (require '(battleships [demo :as d]))
+nil
+
+battleships.core=> (d/place-ship :submarine)
+{:square "G6", :orientation :v}
+
+battleships.core=> (defn place-ship
+              #_=>   "The ship is a map which represents the ship. You must return a map with the square you want to place it, and the orientation (:v is vertical, :h is horizontal)"
+              #_=>   [ship]
+              #_=>   (cond 
+              #_=>    (= ship :patrol-boat)  {:square "A1" :orientation :h}
+              #_=>    (= ship :submarine)  {:square "B1" :orientation :h}))
+#'battleships.core/place-ship
+battleships.core=> (place-ship :submarine)
+{:square "B1", :orientation :h}
+
+battleships.core=> (def test-game (battleships.game/new-game))
+#'battleships.core/test-game
+battleships.core=> (engine/new-player-context test-game :player1)
+{:player1 {:context {:shots [], :last-result nil, :hits [], :ships-sunk []}, :name "Player 1", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}, :player2 {:name "Player 2", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}}
+
+battleships.core=> (def p1con (engine/new-player-context test-game :player1))
+#'battleships.core/p1con
+battleships.core=> p1con
+{:player1 {:context {:shots [], :last-result nil, :hits [], :ships-sunk []}, :name "Player 1", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}, :player2 {:name "Player 2", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}}
+
+battleships.core=> (p1con :player1)
+{:context {:shots [], :last-result nil, :hits [], :ships-sunk []}, :name "Player 1", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}
+battleships.core=> (p1con :player1 :context)
+{:context {:shots [], :last-result nil, :hits [], :ships-sunk []}, :name "Player 1", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}
+
+battleships.core=> ((p1con :player1) :context)
+{:shots [], :last-result nil, :hits [], :ships-sunk []}
+battleships.core=> ((p1con :player1) :ships)
+{:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}
+
+battleships.core=> (def p1 (test-player player1))
+#'battleships.core/p1
+battleships.core=> p1
+{:winner :player2, :player1 {:failed true, :context {:shots [], :last-result nil, :hits [], :ships-sunk []}, :name "player1", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}, :player2 {:failed true, :context {:shots [], :last-result nil, :hits [], :ships-sunk []}, :name "cpu", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}}
+
+battleships.core=> (p1 :player1)
+{:failed true, :context {:shots [], :last-result nil, :hits [], :ships-sunk []}, :name "player1", :board {:width 10, :height 10, :squares [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{}, :coord nil, :orientation nil}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{}, :coord nil, :orientation nil}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{}, :coord nil, :orientation nil}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{}, :coord nil, :orientation nil}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{}, :coord nil, :orientation nil}}}
+battleships.core=> ((p1 :player1) :context)
+{:shots [], :last-result nil, :hits [], :ships-sunk []}
+
+battleships.core=> (use '(battleships core) :reload-all)
+nil
+battleships.core=> (def player1 (make-random-cpu-player "player1"))
+#'battleships.core/player1
+battleships.core=> (def player2 (make-random-cpu-player "player2"))
+#'battleships.core/player2
+battleships.core=> (engine/play player1 player2)
+{:loser :player1, :winner :player2, :player1 {:context {:shots ["E3" "I7" "E6" "A2" "C5" "F2" "D7" "A1" "C4" "B2" "B1" "A10" "H1" "G2" "F3" "G3" "D6" "H8" "H3" "G8" "I4" "I9" "D9" "H7" "G9" "E8" "J1" "H10" "G5" "F6" "B8" "J4" "H6" "I5" "E5" "H4" "B5" "I1" "G7" "F1" "E2" "H5" "F7" "I2" "A6" "D3" "D10" "B4" "B3" "E9" "J3" "D1" "J10" "E10" "G10" "C2" "A5" "B10" "F9" "B6" "D4" "I8" "A7" "E4" "A9" "A8" "G1" "D8" "C9" "B9" "A3" "C3" "H2" "A4" "F5" "H9" "G6" "F8" "I6" "J2" "J9" "J8" "I10" "E7" "B7" "C1" "F10" "C8" "I3" "J6" "C10"], :last-result :miss, :hits ["E3" "E6" "F3" "G3" "D6" "I4" "E8" "E5" "I2" "D3" "C9" "C3" "E7" "C8" "I3"], :ships-sunk [:aircraft-carrier :battleship :destroyer]}, :name "player1", :board {:width 10, :height 10, :squares [1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 17 17 17 1 1 1 1 1 3 1 1 1 1 1 1 1 33 33 3 1 1 1 1 1 9 9 9 1 3 1 5 0 1 1 0 1 1 0 3 1 5 1 0 1 1 0 1 1 3 1 5 1 1 1 1 1 1 1 1 1 5 1 1 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"I5" "H5" "G5" "F5" "E5"}, :coord "E5", :orientation :v}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"J7" "I7" "H7" "G7"}, :coord "G7", :orientation :v}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"G1" "G2" "G3"}, :coord "G1", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"D7" "D8" "D9"}, :coord "D7", :orientation :h}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"F3" "F4"}, :coord "F3", :orientation :h}}}, :player2 {:context {:shots ["B1" "E3" "I5" "G6" "J1" "C7" "D2" "C5" "E5" "A10" "I9" "H10" "D5" "I8" "G3" "H5" "D7" "B7" "C10" "F8" "E9" "I7" "A8" "C9" "F10" "A9" "G10" "B4" "J6" "H3" "H2" "B2" "F1" "D1" "C4" "I10" "A4" "A2" "D3" "J4" "J2" "E6" "G7" "I1" "H6" "H7" "E8" "F3" "A6" "C6" "G2" "A7" "F7" "H8" "G4" "D10" "B9" "J10" "F6" "G1" "D9" "C3" "D4" "I6" "B10" "A3" "E4" "E7" "B5" "D8" "F9" "D6" "J3" "J9" "J7" "I3" "B3" "B8" "J8" "E1" "B6" "G9" "J5" "A1" "F5" "I4" "E2" "F2" "G5" "E10" "C8" "F4"], :last-result :patrol-boat, :hits ["I5" "E5" "G3" "H5" "D7" "I7" "G7" "H7" "F3" "G2" "G1" "D9" "D8" "J7" "F5" "G5" "F4"], :ships-sunk [:destroyer :submarine :battleship :aircraft-carrier :patrol-boat]}, :name "player2", :board {:width 10, :height 10, :squares [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 32 16 17 17 1 1 0 3 1 0 33 1 1 1 1 0 1 3 1 5 5 5 5 1 1 1 1 3 0 1 1 1 1 1 1 1 1 3 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 9 9 9 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1]}, :ships {:aircraft-carrier {:name "aircraft carrier", :key :aircraft-carrier, :length 5, :hits #{"G3" "F3" "E3" "D3" "C3"}, :coord "C3", :orientation :v}, :battleship {:name "battleship", :key :battleship, :length 4, :hits #{"E5" "E6" "E7" "E8"}, :coord "E5", :orientation :h}, :destroyer {:name "destroyer", :key :destroyer, :length 3, :hits #{"I2" "I3" "I4"}, :coord "I2", :orientation :h}, :submarine {:name "submarine", :key :submarine, :length 3, :hits #{"C8" "C9"}, :coord "C7", :orientation :h}, :patrol-boat {:name "patrol boat", :key :patrol-boat, :length 2, :hits #{"D6"}, :coord "C6", :orientation :v}}}}
+
+battleships.core=> (def res (engine/play player1 player2))
+#'battleships.core/res
+battleships.core=> ((res :player1) :context)
+{:shots ["J2" "J3" "A7" "H5" "J6" "D10" "C9" "F10" "J10" "D4" "C10" "A2" "A8" "C6" "I10" "B10" "B4" "G7" "C1" "H10" "I3" "E6" "G5" "B7" "C8" "E5" "G8" "I8" "F3" "G4" "C3" "C7" "E9" "H8" "I5" "I7" "D6" "I4" "E8" "G10" "D8" "D1" "B2" "F1" "G3" "H1" "A10" "E4" "D3" "F2" "I2" "F4" "C4" "F8" "B1" "I6" "A6" "H2" "B9" "G9" "J7" "I1" "G1" "E3" "B6" "J5" "E7" "F5" "D5" "G2" "D7" "A9" "J9" "H7" "H9" "J4" "B8" "E1" "C2" "H6" "D9" "H3" "A5" "A4" "E2" "I9" "A3" "E10" "D2" "J8" "H4" "B5" "G6" "F7" "A1" "F9" "F6"], :last-result :submarine, :hits ["J2" "J3" "J6" "C6" "D6" "F2" "A6" "H2" "B6" "J5" "D5" "G2" "J4" "H6" "E2" "G6" "F6"], :ships-sunk [:destroyer :patrol-boat :aircraft-carrier :battleship :submarine]}
+battleships.core=> (((res :player1) :context) :shots)
+["J2" "J3" "A7" "H5" "J6" "D10" "C9" "F10" "J10" "D4" "C10" "A2" "A8" "C6" "I10" "B10" "B4" "G7" "C1" "H10" "I3" "E6" "G5" "B7" "C8" "E5" "G8" "I8" "F3" "G4" "C3" "C7" "E9" "H8" "I5" "I7" "D6" "I4" "E8" "G10" "D8" "D1" "B2" "F1" "G3" "H1" "A10" "E4" "D3" "F2" "I2" "F4" "C4" "F8" "B1" "I6" "A6" "H2" "B9" "G9" "J7" "I1" "G1" "E3" "B6" "J5" "E7" "F5" "D5" "G2" "D7" "A9" "J9" "H7" "H9" "J4" "B8" "E1" "C2" "H6" "D9" "H3" "A5" "A4" "E2" "I9" "A3" "E10" "D2" "J8" "H4" "B5" "G6" "F7" "A1" "F9" "F6"]
+battleships.core=> (((res :player1) :context) :hits)
+["J2" "J3" "J6" "C6" "D6" "F2" "A6" "H2" "B6" "J5" "D5" "G2" "J4" "H6" "E2" "G6" "F6"]
+battleships.core=> (= (((res :player1) :context) :hits) [])
+false
+
+battleships.core=> (last (((res :player1) :context) :hits)
+              #_=> )
+"F6"
+battleships.core=> (last (((res :player1) :context) :hits))
+"F6"
+battleships.core=> (first (last (((res :player1) :context) :hits)))
+\F
+battleships.core=> (last (last (((res :player1) :context) :hits)))
+\6
+battleships.core=> (def rows ["A" "B" "C" "D" "E" "F" "G" "H" "I" "J"])
+#'battleships.core/rows
+battleships.core=> rows
+["A" "B" "C" "D" "E" "F" "G" "H" "I" "J"]
+
+battleships.core=> (.indexOf rows "F")
+5
+
+battleships.core=> (str (last (last (((res :player1) :context) :hits))))
+"6"
+battleships.core=> (.indexOf rows (str (first (last (((res :player1) :context) :hits)))))
+5
+battleships.core=> (Integer. (str (last (last (((res :player1) :context) :hits)))))
+6
+battleships.core=> rows
+["A" "B" "C" "D" "E" "F" "G" "H" "I" "J"]
+battleships.core=> (def last-row-ind (.indexOf rows (str (first (last (((res :player1) :context) :hits))))))
+#'battleships.core/last-row-ind
+battleships.core=> last-row-ind
+5
+
+battleships.core=> (last rows)
+"J"
+battleships.core=> (= rows[last-row-ind] (last rows))
+false
+battleships.core=> (count rows)
+10
+battleships.core=> last-row-ind
+5
+
+battleships.core=> (rows 8)
+"I"
+battleships.core=> (rows 10)
+IndexOutOfBoundsException   clojure.lang.PersistentVector.arrayFor (PersistentVector.java:106)
+
+battleships.core=> (rows 5)
+"F"
+battleships.core=> (rows 1)
+"B"
+
+battleships.core=> (defn adj-row
+              #_=>   "Find a row adjacent to the last one"
+              #_=>   [last-row]
+              #_=>   (let [rows ["A" "B" "C" "D" "E" "F" "G" "H" "I" "J"]
+              #_=>         last-row-ind (.indexOf rows (str last-row))
+              #_=>         count-rows (count rows)
+              #_=>         next-row ([-1 1] (rand-int 2))]
+              #_=>     (cond 
+              #_=>      (= last-row-ind count-rows) (rows (- count-rows 2))
+              #_=>      (= last-row-ind 0) (rows 1)
+              #_=>      :else (rows (+ last-row-ind next-row)))))
+#'battleships.core/adj-row
+battleships.core=> (adj-row \F)
+"E"
+battleships.core=> (adj-row \F)
+"G"
+battleships.core=> (adj-row \F)
+"G"
+battleships.core=> (adj-row \F)
+"E"
+battleships.core=> (adj-row \A)
+"B"
+battleships.core=> (adj-row \A)
+"B"
+
+battleships.core=> (.indexOf rows (str \J))
+9
+battleships.core=> (count rows)
+10
+battleships.core=> (- (count rows) 2)
+8
+battleships.core=> (rows (- (count rows) 2))
+"I"
+battleships.core=> (defn adj-row
+              #_=>   "Find a row adjacent to the last one"
+              #_=>   [last-row]
+              #_=>   (let [rows ["A" "B" "C" "D" "E" "F" "G" "H" "I" "J"]
+              #_=>         last-row-ind (.indexOf rows (str last-row))
+              #_=>         count-rows (count rows)
+              #_=>         next-row ([-1 1] (rand-int 2))]
+              #_=>     (cond 
+              #_=>      (= last-row-ind (- count-rows 1)) (rows (- count-rows 2))
+              #_=>      (= last-row-ind 0) (rows 1)
+              #_=>      :else (rows (+ last-row-ind next-row)))))
+#'battleships.core/adj-row
+battleships.core=> (adj-row \J)
+"I"
+battleships.core=> (adj-row \J)
+"I"
+battleships.core=> (defn place-ship
+              #_=>   "The ship is a map which represents the ship. You must return a map with the square you want to place it, and the orientation (:v is vertical, :h is horizontal)"
+              #_=>   [ship]
+              #_=>   (cond 
+              #_=>    (= ship :patrol-boat)  {:square "A1" :orientation :h}
+              #_=>    (= ship :submarine)  {:square "B1" :orientation :h}
+              #_=>    (= ship :destroyer)  {:square "C1" :orientation :h}
+              #_=>    (= ship :battleship)  {:square "D1" :orientation :h}
+              #_=>    (= ship :aircraft-carrier)  {:square "E1" :orientation :h}))
+#'battleships.core/place-ship
+battleships.core=> (place-ship :aircraft-carrier)
+{:square "E1", :orientation :h}
+
+battleships.core=> (quit)
+Bye for now!
